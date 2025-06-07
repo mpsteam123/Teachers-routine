@@ -1,114 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Teacher's Subject Routine</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 30px;
-    }
-
-    th, td {
-      padding: 15px;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-
-    th {
-      background-color: #2c3e50;
-      color: #fff;
-    }
-
-    tr.highlight {
-      background-color: #dff9fb;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      th, td {
-        padding: 10px;
-        font-size: 14px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class One Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .schedule-container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
-
-  <h1>Teacher's Weekly Subject Routine</h1>
-
-  <table id="routineTable">
-    <thead>
-      <tr>
-        <th>Day</th>
-        <th>Class</th>
-        <th>Subject</th>
-        <th>Time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Monday</td>
-        <td>Class 8A</td>
-        <td>Mathematics</td>
-        <td>09:00 - 10:00</td>
-      </tr>
-      <tr>
-        <td>Tuesday</td>
-        <td>Class 9B</td>
-        <td>Science</td>
-        <td>10:00 - 11:00</td>
-      </tr>
-      <tr>
-        <td>Wednesday</td>
-        <td>Class 10C</td>
-        <td>English</td>
-        <td>11:00 - 12:00</td>
-      </tr>
-      <tr>
-        <td>Thursday</td>
-        <td>Class 7A</td>
-        <td>Geography</td>
-        <td>08:00 - 09:00</td>
-      </tr>
-      <tr>
-        <td>Friday</td>
-        <td>Class 6B</td>
-        <td>History</td>
-        <td>09:00 - 10:00</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <script>
-    const table = document.getElementById("routineTable");
-    const rows = table.getElementsByTagName("tr");
-
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const today = new Date().getDay();
-    const todayName = days[today];
-
-    for (let i = 1; i < rows.length; i++) {
-      const rowDay = rows[i].cells[0].innerText;
-      if (rowDay === todayName) {
-        rows[i].classList.add("highlight");
-      }
-    }
-  </script>
-
+    <div class="schedule-container">
+        <h1>Class One Schedule</h1>
+        <table>
+            <tr>
+                <th>Period</th>
+                <th>Teacher</th>
+                <th>Subject</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kalpana thing</td>
+                <td>Mathematics</td>
+                <td>10:15 AM - 10:55 AM</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Kalpana thing</td>
+                <td>serophero</td>
+                <td>10:55 AM - 11:35 AM</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Chandra Thapa</td>
+                <td>Handwriting</td>
+                <td>11:00 AM - 12:40 PM</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Punya Prasad Adhikari</td>
+                <td>Math/local</td>
+                <td>12:40 PM - 1:20 PM</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>...</td>
+                <td>...</td>
+                <td>1:20 PM - 1:50 PM</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Chandra thapa</td>
+                <td>nepali</td>
+                <td>1:50 PM - 2:30PM</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Dhanamaya Rai</td>
+                <td>English</td>
+                <td>2:30 PM - 03:10 PM</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Kalpana thing</td>
+                <td>Grammar</td>
+                <td>03:10 PM - 03:50 PM</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
